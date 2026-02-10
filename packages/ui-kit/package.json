@@ -1,0 +1,15 @@
+{
+  "name": "@yoga/ui-kit",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
+    },
+    "./index.css": "./dist/index.css"
+  }
+}
