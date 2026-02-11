@@ -9,7 +9,7 @@ lerna-debug.log*
 
 apps/landing/node_modules
 packages/ui-kit/node_modules
-node_modules
+node_modules/
 .DS_Store
 dist
 dist-ssr

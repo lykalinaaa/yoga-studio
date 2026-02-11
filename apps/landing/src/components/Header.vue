@@ -1,6 +1,9 @@
 <template>
   <header>
-    <div class="menu">
+    <div
+      v-if="showMenu"
+      class="menu"
+    >
       <Button
         v-for="btn in menuList"
         :key="btn.id"
@@ -20,6 +23,13 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import {Button} from "@yoga/ui-kit/src/components";
+
+const props = defineProps({
+  showMenu: {
+    default: false,
+    type: Boolean
+  },
+})
 
 const menuList = ref([
   { id: 'about', title: 'О нас' },
@@ -43,5 +53,19 @@ const menuList = ref([
     display: flex;
     align-items: center;
     gap: 39px;
+  }
+
+  .sign-up-btn {
+    margin-left: auto;
+  }
+
+  @media (max-width: 1000px) {
+    header {
+      padding: 30px 0;
+    }
+
+    .sign-up-btn {
+      margin-right: 30px;
+    }
   }
 </style>

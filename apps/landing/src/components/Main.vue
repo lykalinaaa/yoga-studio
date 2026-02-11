@@ -37,4 +37,25 @@ h2 {
   font-size: 48px;
   margin-top: -10px;
 }
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .main_title {
+    text-align: end;
+    margin-top: 1vh;
+    margin-right: 15px;
+  }
+
+  .main {
+    background-position: 63% center;
+    justify-content: end;
+  }
+}
 </style>

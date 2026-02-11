@@ -36,6 +36,8 @@ function buttonClick(event) {
   font-size: inherit;
   height: 47px;
   border: 2px solid transparent;
+  display: flex;
+  align-items: center;
 }
 
 .default {
