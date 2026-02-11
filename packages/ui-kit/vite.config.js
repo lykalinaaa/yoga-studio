@@ -13,12 +13,8 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
-        globals: {
-          vue: 'Vue'
-        }
+        assetFileNames: 'index.[ext]'
       }
-    },
-    cssCodeSplit: true,
-    outDir: 'dist'
+    }
   }
 })

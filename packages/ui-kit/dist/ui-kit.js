@@ -1,5 +1,6 @@
-import { defineComponent as e, openBlock as n, createElementBlock as o, normalizeClass as c, toDisplayString as s } from "vue";
-const i = "#EAE7DE", u = "#8FA096", r = "#DBC1B2", p = "#383C3F", B = /* @__PURE__ */ e({
+import { defineComponent as s, openBlock as u, createElementBlock as _, normalizeClass as a, toDisplayString as p } from "vue";
+const B = "#EAE7DE", m = "#8FA096", f = "#DBC1B2", y = "#383C3F";
+const E = /* @__PURE__ */ s({
   __name: "Button",
   props: {
     type: {
@@ -12,16 +13,21 @@ const i = "#EAE7DE", u = "#8FA096", r = "#DBC1B2", p = "#383C3F", B = /* @__PURE
     }
   },
   emits: ["click"],
-  setup(t) {
-    return (l, _) => (n(), o("button", {
-      class: c(["button", t.type])
-    }, s(t.title), 3));
+  setup(t, { emit: o }) {
+    const c = o;
+    function i(e) {
+      c("click", e);
+    }
+    return (e, n) => (u(), _("button", {
+      class: a(["button", t.type]),
+      onClick: n[0] || (n[0] = (l) => i(l))
+    }, p(t.title), 3));
   }
 });
 export {
-  p as BG_DARK,
-  i as BG_DEFAULT,
-  u as BG_GREEN,
-  r as BG_PINK,
-  B as Button
+  y as BG_DARK,
+  B as BG_DEFAULT,
+  m as BG_GREEN,
+  f as BG_PINK,
+  E as Button
 };
