@@ -1,7 +1,6 @@
 <template>
   <button
-    class="button"
-    :class="type"
+    :class="['button', type, isSelected ? 'selected' : '']"
     @click="buttonClick($event)"
   >
     {{title}}
@@ -17,6 +16,10 @@ const props = defineProps({
   title: {
     default: 'Кнопка',
     type: String
+  },
+  isSelected: {
+    default: false,
+    type: Boolean
   }
 })
 
@@ -46,6 +49,10 @@ function buttonClick(event) {
 }
 
 .default:hover {
+  border-color: var(--bg-green);
+}
+
+.selected.default {
   border-color: var(--bg-green);
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main" id="main">
     <div class="main_title">
       <h1>Равновесие</h1>
       <h2>Студия йоги</h2>

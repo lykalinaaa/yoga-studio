@@ -8,7 +8,9 @@
         v-for="btn in menuList"
         :key="btn.id"
         :title="btn.title"
+        :isSelected="btn.isSelected"
         type="default"
+        @click="scrollToSection(btn.id)"
       />
     </div>
     <div class="sign-up-btn">
@@ -32,10 +34,20 @@ const props = defineProps({
 })
 
 const menuList = ref([
-  { id: 'about', title: 'О нас' },
-  { id: 'courses', title: 'Курсы' },
-  { id: 'masters', title: 'Наши мастера' }
+  { id: 'about', title: 'О нас', isSelected: false },
+  { id: 'courses', title: 'Курсы', isSelected: false },
+  { id: 'masters', title: 'Наши мастера', isSelected: false }
 ])
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    menuList.value.find(el => el.id === sectionId).isSelected = true
+    element.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+}
 </script>
 
 <style>

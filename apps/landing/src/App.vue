@@ -4,6 +4,7 @@
       :showMenu="showHeader"
     />
     <Main />
+    <About />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
 import {computed, ref} from "vue";
 import {useWindowWidth} from "@/components";
+import About from "@/components/About.vue";
 
 const routeID = ref<string>('main')
 
